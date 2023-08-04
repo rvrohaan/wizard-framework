@@ -1,0 +1,89 @@
+<nav *ngIf="isnavrequired" class="navbar fixed-top bg-white border-bottom border-top" aria-label="Light offcanvas navbar" style="padding-top: 0px; padding-bottom: 0px; height: 70px; width: 100%">
+    <div class="container" style="margin:0px; padding-right: 0px; padding-left: 0px; width: 100%; max-width: 1400px;">
+        <div class="logo col-2" style="width: 70px; margin-right: 0px;">
+            <img src="../assets/images/logo-light-icon.png" alt="homelogo" class="light-logo" style="padding-left: 16px;">
+        </div>
+        <div class="logo"  *ngIf="isbigsidebar">
+            <img src="../assets/images/algo-1bh.png" alt="homepage" class="light-logo" style="width: 142px; height: 40px; margin-right: 20px; padding: 0px;">
+        </div>
+        <div class="col-1" style="padding: 20px; margin-left: 0px; font-size: 20px; ">
+            <a>
+                <i class="bi bi-list" (click)="bigsidebar()" style="width: 17px; height: 17px; cursor: pointer;"></i>
+            </a>
+        </div>
+        <div class="navbar-expand col-9" id="navbarSupportedContent" style="display: flex; float: right">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link redHover fw-semibold text-uppercase text-black  me-1" style="border: 1px solid; border-color: #0056b3; border-radius: 100%; padding: 0px !important; width: 30px; height: 30px; float: right;"
+                        id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person" style="color: #0056b3"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item">{{name}}</a></li>
+                        <li><a class="dropdown-item">{{email}}</a></li>
+                        <li><a class="dropdown-item"><i class="bi bi-gear"></i> Account Settings</a></li>
+                        <li><a class="dropdown-item" routerLink="/login"><i class="bi bi-power"></i> LogOut</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div *ngIf="isnavrequired">
+    <div *ngIf="isbigsidebar" class="sidebar">
+        <p style="font-size: 12px;">Settings</p>
+        <div>
+            <a class="bi bi-journals" type="button"aria-expanded="false" (click)="dropdown()">   Manage Recons</a>
+            <ul *ngIf="isdropdown">
+                <ul><a>Configure Recons</a></ul>
+                <ul><a>Master Data</a></ul>
+                <ul><a>Recon Reports</a></ul>
+            </ul>
+        </div>
+        <a class="bi bi-folder">   Sources</a>
+        <a class="bi bi-border-all">   Database</a>
+    </div>
+    <div *ngIf="issmallsidebar" class="sidebar-small">
+        <div id="tooltip">
+            <p class="bi bi-journals" style="font-size: 25px;"></p>
+            <ul id="tooltiptext" style="list-style: none;">Manage Recons 
+                <li><a>Configure Recons</a></li>
+                <li><a>Master Data</a></li>
+                <li><a>Recon Reports</a></li>
+            </ul>    
+        </div>
+        <!-- <p class="bi bi-folder" style="font-size: 25px;"></p>
+        <span class="hide-menu">Sources</span> -->
+        <!-- <span class="mydiv"  data-hover="Sources">
+            <p class="bi bi-folder" style="font-size: 25px;"></p>
+        </span> -->
+        <div id="tooltip">
+            <p class="bi bi-folder" style="font-size: 25px;"></p>
+            <a id="tooltiptext">Sources</a>
+        </div>
+        <!-- <span class="mydata" data-hover="Database">
+            <p class="bi bi-border-all" style="font-size: 25px;"></p>
+        </span> -->
+        <div id="tooltip">
+            <p class="bi bi-border-all" style="font-size: 25px;"></p>
+            <span id="tooltiptext">Database</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isnavrequired">
+    <div *ngIf="issmallsidebar" style="padding-top: 80px; padding-left: 30px;" class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div *ngIf="isnavrequired">
+    <div *ngIf="isbigsidebar" style="padding-top: 80px; padding-left: 190px;" class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div *ngIf="navnotrequired">
+    <router-outlet></router-outlet>
+</div>
+

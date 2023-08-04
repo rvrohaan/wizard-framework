@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "rohaan",
+      "email": "rohaan@gmail.com",
+      "password": "Rohaan@123",
+      "confirmPassword": "Rohaan@123",
+      "id": 1
+    },
+    {
+      "name": "roshini",
+      "email": "roshini@gmail.com",
+      "password": "Roshini@123",
+      "confirmPassword": "Roshini@123",
+      "id": 2
+    },
+    {
+      "name": "saila",
+      "email": "saila@gmail",
+      "password": "Roshini@123",
+      "confirmPassword": "Roshini@123",
+      "id": 3
+    }
+  ]
+}

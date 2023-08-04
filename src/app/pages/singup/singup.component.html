@@ -1,0 +1,76 @@
+<div class="login-register" style="background-image:url(../../../assets/images/background/login-register.jpg);">
+    <div class="center">
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+            <h6 class="card-title m-b-20" style="margin-bottom: 20px; font-weight: 100 !important;">Sign Up</h6>
+            <div class="mb-3">
+                <label for="username" style="font-weight: 100 !important; color:#67757c">User Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="loginuser">
+                            <i class="bi bi-person"></i>
+                        </span>
+                    </div>
+                    <input formControlName="name" type="text" class="form-control" id="loginusername" AUTOCOMPLETE="off"
+                           ng-model="credentials.username" style="font-weight: 100 !important; color: #67757c"
+                           placeholder="Username">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" style="font-weight: 100 !important; color:#67757c">Email</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="loginemail">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                    </div>
+                    <input formControlName="email" type="text" class="form-control" id="loginuseremail" AUTOCOMPLETE="off"
+                           ng-model="credentials.email" style="font-weight: 100 !important; color: #67757c"
+                           placeholder="Enter email">
+                </div>
+            </div>
+            <div class="mb-3" style="font-weight: 100 !important; color:#67757c">
+                <label for="exampleInputPassword1">Password</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="loginPassword">
+                            <i class="bi bi-lock"></i>
+                        </span>
+                    </div>
+                    <input formControlName="password" type="password" class="form-control" id="loginPassowrd" 
+                        ng-model="credentials.password" style="font-weight: 100 !important; color: #67757c"
+                        placeholder=" Enter Password">
+                </div>
+            </div>
+            <div class="mb-3" style="font-weight: 100 !important; color:#67757c">
+                <label for="exampleConfirmpassword">Confirm Password</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="loginPassword">
+                            <i class="bi bi-lock"></i>
+                        </span>
+                    </div>
+                    <input formControlName="confirmPassword" type="password" class="form-control" id="loginConfirmPassowrd" 
+                        ng-model="credentials.confirmpassword" style="font-weight: 100 !important; color: #67757c"
+                        placeholder=" Enter Password">
+                </div>
+            </div>
+            <div class="forgot m-b-5" style="font-weight: 100 !important;"> 
+                <a style="color: #398bf7; cursor: pointer"><i class="bi bi-question"></i>Password Policy</a>
+            </div>
+            <div class="password-policy">
+                <p>Note:</p>
+                <ul><i class="bi bi-arrow-right"></i>Minimun 8 and maximum 32 charecters.</ul>
+                <ul><i class="bi bi-arrow-right"></i>Must contain atleast one digit,one capital and one small alphabet.</ul>
+                <ul><i class="bi bi-arrow-right"></i>Must contain atleast one of the special charecters(@ # $ ^ * _).</ul>
+                <ul><i class="bi bi-arrow-right"></i>Should not repeat the charecters more than two times.</ul>
+                <ul><i class="bi bi-arrow-right"></i>Should not contain spaces.</ul>
+            </div>
+            <div style="margin-top: 20px; margin-bottom: 20px;">
+                <button type="submit" class="btn login" style="font-weight: 100 !important;">Sign Up</button>
+            </div>
+            <div style="text-align: center; font-weight: 100 !important;">
+                <p>Already have an account?  <a routerLink="/login">Sign In</a></p>
+            </div>
+        </form>
+</div>
+</div>

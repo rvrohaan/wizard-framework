@@ -1,0 +1,221 @@
+.nav {
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    background: #398bf7;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.list-button {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: start;
+    float: left;
+}
+
+.sidebar {
+    height: 100%;
+    width: 232px;
+    padding-top: 75px !important;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: "Montserrat", sans-serif;
+    color: #687384;
+}
+
+.sidebar-small {
+    height: 100%;
+    width: 70px;
+    padding-top: 75px !important;
+    position: fixed;
+    z-index: 1;
+    top: 75;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: "Montserrat", sans-serif;
+    color: #687384;
+}
+
+.sidebar a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 16px;
+color: #687384;
+display: block;
+transition: 0.3s;
+}
+
+.sidebar-small p {
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #687384;
+    display: block;
+    transition: 0.3s;
+}
+
+    
+.sidebar p {
+    padding: 8px 8px 0px 32px;
+    text-decoration: none;
+    color: #687384;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+color: #ffff;
+}
+
+.sidebar-small p:hover {
+    color: #ffff;
+}
+
+.sidebar dropdown {
+    padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 16px;
+color: #687384;
+display: block;
+transition: 0.3s;
+}
+
+.mydiv {
+    position: relative;
+}
+
+.mydiv::before {
+content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  /* transition: opacity 1s ease-in-out; */
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+/* .hide {
+    display: none;
+    content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+} */
+
+/* .mydiv:hover + .hide {
+    opacity: 1;
+    display: block;
+} */
+
+.mydiv:hover:before {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+}
+
+.mydata {
+    position: relative;
+}
+
+.mydata::before {
+content: attr(data-hover);
+display: inline;
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  /* transition: opacity 1s ease-in-out; */
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+.mydata:hover:before {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+}
+
+.sidebar-small > .mydiv:hover {
+    width: 220px;
+    display: inline;
+}
+
+#tooltip {
+    position: relative;
+    display: inline-block;
+    
+}
+
+#tooltip #tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+    /* bottom: 40%;
+    left: 90%; */
+    white-space: nowrap; 
+    /* width: 20px;  */
+    overflow: hidden;
+    text-overflow: clip;
+
+}
+
+#tooltiptext {
+    white-space: nowrap; 
+    /* width: 20px;  */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#tooltip:hover #tooltiptext {
+    visibility: visible;
+    overflow:visible;
+    /* text-overflow: ellipsis; */
+}
+
+#tooltiptext:hover {
+    overflow: visible;
+}
+
